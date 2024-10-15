@@ -20,7 +20,7 @@ function Login() {
 
     if (isSignUp) {
       try {
-        const response = await fetch('http://localhost:8080/api/signup', {
+        const response = await fetch('https://blogpost-webapp-23vw.onrender.com/api/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function Login() {
       }
     } else {
       try {
-        const response = await fetch('http://localhost:8080/api/data');
+        const response = await fetch('https://blogpost-webapp-23vw.onrender.com/api/data');
         const users = await response.json();
 
         const userExists = users.some(user => user.username === username && user.password === password);
