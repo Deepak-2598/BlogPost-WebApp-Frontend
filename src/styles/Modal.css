@@ -1,0 +1,77 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.expiry-cvv-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry, .cvv {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.expiry-input, .cvv-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.pay-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pay-button:disabled {
+    background-color: #ccc;
+}
