@@ -55,6 +55,11 @@ const Editor = () => {
         });
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/');
+    };
+
     return (
         <div className="editor-container">
             <form className="editor-form">
@@ -79,6 +84,7 @@ const Editor = () => {
                 
                 <button type="button" onClick={() => setIsPaying(true)} className="editor-submit">Publish Blog</button>
                 <button type="button" onClick={handlePreview} className="editor-preview">Preview</button>
+                <button type="button" onClick={handleLogout} className="editor-logout logout-button">Logout</button>
             </form>
 
             <Modal isOpen={isPaying} onClose={() => setIsPaying(false)}>
